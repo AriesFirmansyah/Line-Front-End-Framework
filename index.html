@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>JajanDong</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    
+        <style>
+            
+        </style>
+    </head>
+    
+    <body>
+        <div id="cont1" class="container" style="background-color: ">
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">
+                    <p class="judul"><img class="logo" src="./images/logo.png" /> JajanDong</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">
+                    <p id="greet"></p>
+                </div>
+            </div>
+            <div id="buttonTop" class="row" style="margin-top: -10px; padding-bottom: 40px;">
+                <div class="buttonGroup">
+                    <div class="buttonRow">
+                        <button id="btnExternalWindow" class="btn btn-success btn-small">Open External Window</button>
+                        <button id="closeLIFF" class="btn btn-danger btn-small">Close LIFF App</button>
+                    </div>
+        
+                </div>
+            </div>
+            
+            <div class="container products-container">
+                <!-- Makanan 1 -> Mie Ayam -->
+                <div class="col-sm-4 single-product" id="singleProduct">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img id="image" src="images/mie ayam.png" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price col-md-8">
+                                    <h5 id="nama1">Mie Ayam</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Harga</h5>
+                                    <h5 id="harga1" class="blue">Rp.15000,-</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p id="order1" class="btn-order btnOrder">
+                                    <a href="#" class="hidden-sm">Order</a>
+                                </p>
+                                <p id="details1" class="btn-details btnDetails">
+                                    <a href="#" class="hidden-sm">Details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Makanan 2 -> Ayam Goreng -->
+                <div class="col-sm-4 single-product" id="singleProduct">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img id="image" src="images/ayamgoreng.png" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price col-md-8">
+                                    <h5 id="nama2">Ayam Goreng</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Harga</h5>
+                                    <h5 id="harga2" class="blue">Rp.11000,-</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p id="order2" class="btn-order btnOrder">
+                                    <a href="#" class="hidden-sm">Order</a>
+                                </p>
+                                <p id="details2" class="btn-details btnDetails">
+                                    <a href="#" class="hidden-sm">Details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Makanan  1-> Nasi Goreng -->
+                <div class="col-sm-4 single-product" id="singleProduct">
+                    <div class="col-item">
+                        <div class="photo">
+                            <img id="image" src="images/nasigoreng.png" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="price col-md-8">
+                                    <h5 id="nama3">Nasi Goreng</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Harga</h5>
+                                    <h5 id="harga3" class="blue">Rp.18000,-</h5>
+                                </div>
+                            </div>
+                            <div class="separator clear-left">
+                                <p id="order3" class="btn-order btnOrder">
+                                    <a href="#" class="hidden-sm">Order</a>
+                                </p>
+                                <p id="details3" class="btn-details btnDetails">
+                                    <a href="#" class="hidden-sm">Details</a>
+                                </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cont2" class="container" style="background-color: ">
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">
+                    <p class="judul"><img class="logo" src="./images/logo.png" /> JajanDong</p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <p><img class='greet' src='./images/customer.png' /> Dear Customer, anda tidak dapat melakukan order karena belum melakukan login. Silahkan login terlebih dahulu.  </p>
+                <button id="login" class="btn btn-success btn-small">Log in</button>
+            </div>
+            
+        </div>
+        <!-- TABLE ORDERS -->
+        <div id="contOrder" class="jumbotron">
+            <h1 class="text-center" style="margin-bottom: 50px;">
+                Your Order
+            </h1>
+            <div class="container">
+                <table id="tabel" class="table col-sm-4">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama pemesan</th>
+                            <th scope="col">Nama makanan</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Hapus pesanan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="isi">
+                        <tr id="defaultorder" class="text-center">
+                            <td colspan="6">Tidak ada pesanan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="pesan" class="btn btn-warning btn-small">Pesan</button>
+            </div>
+        </div>
+        <div id="exBrowserbtn" class="row">
+            <div class="buttonGroup">
+                <button id="btnLogin" class="btn btn-success btn-small">Log in</button>
+                <button id="btnLogout" class="btn btn-warning btn-small">Log out</button>
+            </div>
+        </div>
+        
+        <!-- Modal Mie Ayam -->
+        <div id="productModal1" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detail Makanan</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/mie ayam.png" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Mie Ayam</h3>
+                            <p>
+                                Mie ayam adalah sebuah mie dan ayam.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Ayam Goreng -->
+        <div id="productModal2" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detail Makanan</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/ayamgoreng.png" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Ayam Goreng</h3>
+                            <p>
+                                Ayam goreng adalah sebuah ayam yang digoreng.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Ayam Goreng -->
+        <div id="productModal3" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detail Makanan</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/nasigoreng.png" class="img-responsive"/>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Nasi Goreng</h3>
+                            <p>
+                                Nasi goreng adalah sebuah nasi yang digoreng.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--BROWSER INFO-->
+        <div id="info1">
+            <div style="margin-top: 40px;">
+                <div id="browserinfo"></div>
+            </div>
+        </div>
+        <!-- LIFF ID ERROR -->
+        <div id="info2" class="hidden">
+            <p>LIFF ID ERROR.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="info3" class="hidden">
+            <p>LIFF INIT ERRROR.</p>
+        </div>
+        <!-- NODE.JS LIFF ID ERROR -->
+        <div id="info4" class="hidden">
+            <p>NODE.JS LIFF ID ERROR.</p>
+        </div>
+
+    </body>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="script.js"></script>
+</html>
